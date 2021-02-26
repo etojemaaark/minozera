@@ -1,0 +1,63 @@
+/// ADAPTIVE ///
+
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1630;
+$md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+/// COLORS ///
+
+// Colors
+$accent: #699bf7;
+$accent2: #cbded8;
+$accent3: #dfd8cd;
+$bgc: #f0f6f4;
+$bgc2: #f2f2f2;
+$text: #333333;
+$gray: #bdbdbd;
+$white: rgba(255, 255, 255, 1);
+$black: rgba(0, 0, 0, 1);
+$red: rgba(235, 87, 87, 1);
+
+/// FONT-FAMILY ///
+
+$fontFamilyMain: "Rubik";
+
+/// BS ///
+
+$grid-gutter-width: 30px;
+
+// $grid-breakpoints: (
+// 	xs: 0,
+// 	sm: 576px,
+// 	md: 768px,
+// 	lg: 992px,
+// 	xl: 1200px,
+// 	xxl: 1920px,
+// ) !default;
+
+// $container-max-widths: (
+// 	sm: 540px,
+// 	md: 720px,
+// 	lg: 960px,
+// 	xl: 1350px,
+// 	xxl: 1670px,
+// ) !default;
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1024px,
+	xxl: 1440px,
+) !default;
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1350px,
+	xxl: 1670px,
+) !default;

@@ -1,0 +1,8 @@
+.DS_store
+package-lock.json
+node_modules
+.idea
+.vscode
+/*.exe.stackdump
+form.php
+robots.txt

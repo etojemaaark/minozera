@@ -1,0 +1,149 @@
+@import "utils/vars";
+// @import "utils/libs";
+@import "utils/nullstyle";
+@import "utils/fonts";
+@import "icons";
+@import "utils/mixins";
+///
+
+/// ОСНОВНАЯ СЕТКА ///
+body {
+	font-family: $fontFamilyMain;
+}
+.container {
+	max-width: $maxWidthContainer + px;
+	width: 100%;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+._active {
+	opacity: 1;
+	visibility: visible;
+	transform: translate(0, 0);
+}
+._header-fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99999;
+	background-color: $white;
+	width: 100%;
+	height: 76px;
+	transition: all 0.3s ease 0s;
+	animation: show_header 0.7s;
+	@keyframes show_header {
+		0% {
+			top: -42px;
+		}
+		100% {
+			top: 0;
+		}
+	}
+}
+._btn {
+	display: inline-block;
+	text-align: center;
+	max-width: 192px;
+	width: 100%;
+	height: 46px;
+	padding-top: 17px;
+	border-radius: 5px;
+	background-color: $accent;
+	text-transform: uppercase;
+	color: $white;
+	font-size: 14px;
+	letter-spacing: 0.04em;
+	transition: all 0.2s linear 0s;
+	position: relative;
+	&:before {
+		content: ">";
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		top: 0;
+		left: 0px;
+		height: 100%;
+		width: 30px;
+		font-size: 18px;
+		font-weight: 700;
+		background-color: rgba(255, 255, 255, 0.3);
+		border-radius: 5px 50% 50% 5px;
+		transform: scale(0, 1);
+		transform-origin: left center;
+		transition: all 0.2s linear 0s;
+	}
+	&:hover {
+		text-indent: 26px;
+		&:before {
+			transform: scale(1, 1);
+			text-indent: 0;
+		}
+	}
+}
+._ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	img {
+		width: 0;
+		height: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		visibility: hidden;
+		object-fit: cover;
+	}
+}
+._h2 {
+	font-weight: 500;
+	font-size: 64px;
+	line-height: 130%;
+	color: $text;
+	margin-bottom: 12px;
+}
+._h3 {
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 130%;
+	color: $text;
+}
+
+@media (max-width: 1350px) {
+	._h2 {
+		font-size: 50px;
+	}
+}
+@media (max-width: 960px) {
+	._h2 {
+		font-size: 40px;
+	}
+	._h3 {
+		font-size: 26px;
+	}
+}
+@media (max-width: 540px) {
+	._h2 {
+		font-size: 24px;
+		line-height: 28px;
+	}
+	._h3 {
+		font-size: 18px;
+	}
+}
+///
+
+/// ПОДКЛЮЧЕНИЕ СЕКЦИЙ ///
+@import "../../pug/blocks/header/header";
+@import "../../pug/blocks/main/main";
+// @import "../../pug/blocks/selection/selection";
+// @import "../../pug/blocks/citys/citys";
+// @import "../../pug/blocks/advantages/advantages";
+// @import "../../pug/blocks/sticky/sticky";
+// @import "../../pug/blocks/genplan/genplan";
+// @import "../../pug/blocks/map/map";
+// @import "../../pug/blocks/modal/modal";
