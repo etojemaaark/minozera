@@ -1,25 +1,26 @@
 header.header
-	.container
-		.header__wrapper._anim-items._anim-no-hide
-			.header__left
-				a.header__logo(href="##") 
-					img(src="static/images/general/logo.png", alt="Министерские озера")
-				nav
-					ul.header__menu-list
-						li
-							a.header__menu-link(href="##") О комплексе
-						li
-							a.header__menu-link(href="##") Генплан
-						li
-							a.header__menu-link(href="##") Квартиры
-						li
-							a.header__menu-link(href="##") Документы
-						li
-							a.header__menu-link(href="##") Контакты
-			.header__right
-				a.header__phone(href="tel:88008888888")
-					+icon('phone')
-					p 8 800-888-88-888
-				a.header__callback._btn(href="#") ОБРАТНЫЙ ЗВОНОК
-			a.header__burger(href="##")
-				+icon('burger')
+	.header__fixed-wrapper
+		.container
+			.header__wrapper._anim-items._anim-no-hide
+				.header__left
+					a.header__logo(href="##") 
+						img(src="static/images/general/logo.png", alt="Министерские озера")
+					nav
+						ul.header__menu-list
+							li
+								a.header__menu-link(href="##") О комплексе
+							li
+								a.header__menu-link(href="##") Генплан
+							li
+								a.header__menu-link(href="##") Квартиры
+							li
+								a.header__menu-link(href="##") Документы
+							li
+								a.header__menu-link(href="##") Контакты
+				.header__right
+					a.header__phone(href="tel:88008888888")
+						+icon('phone')
+						p 8 800-888-88-888
+					a.header__callback._btn(href="#") ОБРАТНЫЙ ЗВОНОК
+				a.header__burger(href="##")
+					+icon('burger')

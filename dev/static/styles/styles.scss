@@ -9,6 +9,7 @@
 /// ОСНОВНАЯ СЕТКА ///
 body {
 	font-family: $fontFamilyMain;
+	position: relative;
 }
 .container {
 	max-width: $maxWidthContainer + px;
@@ -16,32 +17,27 @@ body {
 	padding: 0 10px;
 	margin: 0 auto;
 }
-._active {
-	opacity: 1;
-	visibility: visible;
-	transform: translate(0, 0);
-}
-._header-fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	right: 0;
-	z-index: 99999;
-	background-color: $white;
-	width: 100%;
-	height: 76px;
-	transition: all 0.3s ease 0s;
-	animation: show_header 0.7s;
-	@keyframes show_header {
-		0% {
-			top: -42px;
-		}
-		100% {
-			top: 0;
-		}
-	}
-}
+// ._header-fixed {
+// 	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	bottom: 0;
+// 	right: 0;
+// 	z-index: 99999;
+// 	background-color: $white;
+// 	width: 100%;
+// 	height: 66px;
+// 	transition: all 0.3s ease 0s;
+// 	animation: show_header 0.7s;
+// 	@keyframes show_header {
+// 		0% {
+// 			top: -42px;
+// 		}
+// 		100% {
+// 			top: 0;
+// 		}
+// 	}
+// }
 ._btn {
 	display: inline-block;
 	text-align: center;
@@ -140,8 +136,8 @@ body {
 /// ПОДКЛЮЧЕНИЕ СЕКЦИЙ ///
 @import "../../pug/blocks/header/header";
 @import "../../pug/blocks/main/main";
-// @import "../../pug/blocks/selection/selection";
-// @import "../../pug/blocks/citys/citys";
+@import "../../pug/blocks/selection/selection";
+@import "../../pug/blocks/citys/citys";
 // @import "../../pug/blocks/advantages/advantages";
 // @import "../../pug/blocks/sticky/sticky";
 // @import "../../pug/blocks/genplan/genplan";

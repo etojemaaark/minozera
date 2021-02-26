@@ -13,21 +13,28 @@
 			font-size: 72px;
 			line-height: 85px;
 			color: $white;
-			// opacity: 0;
-			// transform: translate(0, 0);
-			// transition: all 0.3s ease 0s;
-			// ._active {
-			// 	opacity: 1;
-			// 	transform: translate(0, 0);
-			// }
+			opacity: 0;
+			visibility: hidden;
+			transform: translate(0, -120%);
+			transition: all 0.6s ease 0s;
+		}
+		p {
+			font-weight: 500;
+			font-size: 28px;
+			line-height: 140%;
+			color: $white;
+			opacity: 0;
+			visibility: hidden;
+			transform: translate(0, -120%);
+			transition: all 0.6s ease 0s;
+		}
+		._active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
 		}
 	}
-	p {
-		font-weight: 500;
-		font-size: 28px;
-		line-height: 140%;
-		color: $white;
-	}
+
 	&__image {
 		margin: 66px 0 20px 0;
 		width: 100%;
@@ -46,6 +53,14 @@
 	}
 	&__pulse {
 		position: absolute;
+		opacity: 0;
+		transform: translate(-28%, 0);
+		transition: all 0.6s ease 0s;
+		._active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(28%, 0);
+		}
 	}
 	.pulse-1 {
 		top: 28%;

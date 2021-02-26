@@ -13,50 +13,52 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <div class="header__wrapper _anim-items _anim-no-hide">
-          <div class="header__left"><a class="header__logo" href="##"> <img src="static/images/general/logo.png" alt="Министерские озера"></a>
-            <nav>
-              <ul class="header__menu-list">
-                <li><a class="header__menu-link" href="##">О комплексе</a></li>
-                <li><a class="header__menu-link" href="##">Генплан</a></li>
-                <li><a class="header__menu-link" href="##">Квартиры</a></li>
-                <li><a class="header__menu-link" href="##">Документы</a></li>
-                <li><a class="header__menu-link" href="##">Контакты</a></li>
-              </ul>
-            </nav>
+      <div class="header__fixed-wrapper">
+        <div class="container">
+          <div class="header__wrapper _anim-items _anim-no-hide">
+            <div class="header__left"><a class="header__logo" href="##"> <img src="static/images/general/logo.png" alt="Министерские озера"></a>
+              <nav>
+                <ul class="header__menu-list">
+                  <li><a class="header__menu-link" href="##">О комплексе</a></li>
+                  <li><a class="header__menu-link" href="##">Генплан</a></li>
+                  <li><a class="header__menu-link" href="##">Квартиры</a></li>
+                  <li><a class="header__menu-link" href="##">Документы</a></li>
+                  <li><a class="header__menu-link" href="##">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__right"><a class="header__phone" href="tel:88008888888">
+                <svg class="svg-sprite-icon icon-phone">
+                  <use xlink:href="static/images/svg/symbol/sprite.svg#phone"></use>
+                </svg>
+                <p>8 800-888-88-888</p></a><a class="header__callback _btn" href="#">ОБРАТНЫЙ ЗВОНОК</a></div><a class="header__burger" href="##">
+              <svg class="svg-sprite-icon icon-burger">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#burger"></use>
+              </svg></a>
           </div>
-          <div class="header__right"><a class="header__phone" href="tel:88008888888">
-              <svg class="svg-sprite-icon icon-phone">
-                <use xlink:href="static/images/svg/symbol/sprite.svg#phone"></use>
-              </svg>
-              <p>8 800-888-88-888</p></a><a class="header__callback _btn" href="#">ОБРАТНЫЙ ЗВОНОК</a></div><a class="header__burger" href="##">
-            <svg class="svg-sprite-icon icon-burger">
-              <use xlink:href="static/images/svg/symbol/sprite.svg#burger"></use>
-            </svg></a>
         </div>
       </div>
     </header>
     <section class="main">
       <div class="main__image"><img src="static/images/general/main-bg.png" alt=""></div>
       <div class="main__wrapper container">
-        <h1>Министерские озера</h1>
-        <p>Жилой комплекс в Сочи с видом на горы и море</p>
-        <div class="main__pulse pulse-1">
+        <h1 class="_anim-items _anim-no-hide">Министерские озера</h1>
+        <p class="_anim-items _anim-no-hide">Жилой комплекс в Сочи с видом на горы и море</p>
+        <div class="main__pulse pulse-1 _anim-items _anim-no-hide">
           <div class="main__pulse-wrapper">
             <div class="main__pulse-circle">
               <div class="main__pulse-text">Окруженный с двух сторон горами, жилой комплекс в любую погоду защищен от ветра</div>
             </div>
           </div>
         </div>
-        <div class="main__pulse pulse-2">
+        <div class="main__pulse pulse-2 _anim-items _anim-no-hide">
           <div class="main__pulse-wrapper">
             <div class="main__pulse-circle">
               <div class="main__pulse-text">Близость национального парка Сочи с его южной зеленью создает особый микроклимат</div>
             </div>
           </div>
         </div>
-        <div class="main__pulse pulse-3">
+        <div class="main__pulse pulse-3 _anim-items _anim-no-hide">
           <div class="main__pulse-wrapper">
             <div class="main__pulse-circle">
               <div class="main__pulse-text">Комплекс расположен в долине реки Бзуг, ее набережная укреплена и благоустроена </div>
@@ -64,54 +66,86 @@
           </div>
         </div>
       </div>
-      <div class="main__wrapper container">
-        <h1>Министерские озера</h1>
-        <p>Жилой комплекс в Сочи с видом на горы и море</p>
-        <div class="main__pulse pulse-1">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Окруженный с двух сторон горами, жилой комплекс в любую погоду защищен от ветра</div>
+    </section>
+    <div class="selection _anim-items _anim-no-hide">
+      <div class="selection__topline container">
+        <div class="selection__left"><strong>Подобрать квартиру</strong>
+          <div class="selection__filtres">
+            <div class="selection__checkbox-group">
+              <div class="selection__checkbox-item">
+                <input id="checkbox-1" type="checkbox" name="checkbox" value="1">
+                <label id="checkbox-1" for="checkbox-1">Студия	</label>
+              </div>
+              <div class="selection__checkbox-item">
+                <input id="checkbox-2" type="checkbox" name="checkbox" value="2">
+                <label id="checkbox-2" for="checkbox-2">1</label>
+              </div>
+              <div class="selection__checkbox-item">
+                <input id="checkbox-3" type="checkbox" name="checkbox" value="3" checked>
+                <label id="checkbox-3" for="checkbox-3">2</label>
+              </div>
+              <div class="selection__checkbox-item">
+                <input id="checkbox-4" type="checkbox" name="checkbox" value="4">
+                <label id="checkbox-4" for="checkbox-4">3+</label>
+              </div>
+            </div>
+            <div class="selection__price-group">
+              <input id="price-1" type="text" name="price" placeholder="от 1 999 999">
+              <input id="price-2" type="text" name="price" placeholder="до 13 999 999">
+              <p>₽</p>
             </div>
           </div>
         </div>
-        <div class="main__pulse pulse-2">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Близость национального парка Сочи с его южной зеленью создает особый микроклимат</div>
-            </div>
-          </div>
-        </div>
-        <div class="main__pulse pulse-3">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Комплекс расположен в долине реки Бзуг, ее набережная укреплена и благоустроена </div>
-            </div>
-          </div>
-        </div>
+        <div class="selection__right"><a class="selection__btn _btn" href="#"> <span>
+              57 ПРЕДЛОЖЕНИЙ</span></a></div>
       </div>
-      <div class="main__wrapper container">
-        <h1>Министерские озера</h1>
-        <p>Жилой комплекс в Сочи с видом на горы и море</p>
-        <div class="main__pulse pulse-1">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Окруженный с двух сторон горами, жилой комплекс в любую погоду защищен от ветра</div>
-            </div>
+    </div>
+    <section class="citys">
+      <div class="container">
+        <h2 class="_h2">Город в городе</h2>
+        <div class="citys__subtitle">Министерские Озера состоят из 4 кварталов: Фруктовый, Бизнес, Жилой и Город Детства. Дома комфорт-класса, чистый воздух, буйство южных красок, близость городской инфраструктуры</div>
+        <div class="citys__content">
+          <div class="citys__item">
+            <div class="citys__image"><img src="static/images/content/citys/citys-1.png" alt=""></div>
+            <h3 class="_h3">Развитая инфраструктура</h3>
+            <p>На территории предусмотрено строительство общеобразовательной школы на 400 мест и детского сада на 60 мест</p>
+          </div>
+          <div class="citys__item">
+            <div class="citys__image"><img src="static/images/content/citys/citys-2.png" alt=""></div>
+            <h3 class="_h3">Безопасность территории</h3>
+            <p>Территория закрытая. Ведется круглосуточное видеонаблюдение, установлена система оповещения при пожаре</p>
+          </div>
+          <div class="citys__item">
+            <div class="citys__image"><img src="static/images/content/citys/citys-3.png" alt=""></div>
+            <h3 class="_h3">Максимальный комфорт</h3>
+            <p>Каждый подъезд оснащен лифтом с высокой степенью грузоподъемности и пандусами. Комплекс подключен к центральным коммуникациям</p>
           </div>
         </div>
-        <div class="main__pulse pulse-2">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Близость национального парка Сочи с его южной зеленью создает особый микроклимат</div>
+        <div class="citys__slider swiper-container">
+          <div class="citys__slider-wrapper swiper-wrapper">
+            <div class="citys__slider-slide swiper-slide">
+              <div class="citys__item">
+                <div class="citys__image"><img src="static/images/content/citys/citys-1.png" alt=""></div>
+                <h3 class="_h3">Развитая инфраструктура</h3>
+                <p>На территории предусмотрено строительство общеобразовательной школы на 400 мест и детского сада на 60 мест</p>
+              </div>
+            </div>
+            <div class="citys__slider-slide swiper-slide">
+              <div class="citys__item _slider-m28">
+                <div class="citys__image"><img src="static/images/content/citys/citys-2.png" alt=""></div>
+                <h3 class="_h3">Безопасность территории</h3>
+                <p>Территория закрытая. Ведется круглосуточное видеонаблюдение, установлена система оповещения при пожаре</p>
+              </div>
+            </div>
+            <div class="citys__slider-slide swiper-slide">
+              <div class="citys__item _slider-m28">
+                <div class="citys__image"><img src="static/images/content/citys/citys-3.png" alt=""></div>
+                <h3 class="_h3">Максимальный комфорт</h3>
+                <p>Каждый подъезд оснащен лифтом с высокой степенью грузоподъемности и пандусами. Комплекс подключен к центральным коммуникациям</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="main__pulse pulse-3">
-          <div class="main__pulse-wrapper">
-            <div class="main__pulse-circle">
-              <div class="main__pulse-text">Комплекс расположен в долине реки Бзуг, ее набережная укреплена и благоустроена </div>
-            </div>
-          </div>
+          <div class="citys__slider-progressbar"></div>
         </div>
       </div>
     </section>
