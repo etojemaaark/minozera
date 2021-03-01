@@ -23,7 +23,6 @@ aside {
 	display: block;
 }
 html {
-	overflow-x: hidden;
 }
 html,
 body {
@@ -34,6 +33,10 @@ body {
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+}
+body {
+	// overflow-y: hidden;
+	overflow-x: hidden;
 }
 input,
 button,

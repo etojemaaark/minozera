@@ -1,5 +1,6 @@
 "use strict";
 
+/// header ///
 window.onscroll = function showHeader() {
   if (window.innerWidth > 820) {
     var header = document.querySelector('.header__fixed-wrapper');
@@ -10,7 +11,8 @@ window.onscroll = function showHeader() {
       header.classList.remove('_header-fixed');
     }
   }
-};
+}; /// anim scroll ///
+
 
 var animItems = document.querySelectorAll('._anim-items');
 
@@ -52,4 +54,16 @@ if (animItems.length > 0) {
   setTimeout(function () {
     animOnScroll();
   }, 100);
+} /// burger ///
+
+
+var menuBurger = document.querySelector('header__burger');
+var menu = document.querySelector('header__menu');
+menuBurger.addEventListener('click', myFunction);
+
+function myFunction() {
+  menuBurger.classList.toggle('active');
+  menu.classList.toggle('active');
 }
+
+;
