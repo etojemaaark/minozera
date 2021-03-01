@@ -17,6 +17,11 @@
 			visibility: hidden;
 			transform: translate(0, -120%);
 			transition: all 0.6s ease 0s;
+			&._active {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
+			}
 		}
 		p {
 			font-weight: 500;
@@ -27,14 +32,13 @@
 			visibility: hidden;
 			transform: translate(0, -120%);
 			transition: all 0.6s ease 0s;
-		}
-		._active {
-			opacity: 1;
-			visibility: visible;
-			transform: translate(0, 0);
+			&._active {
+				opacity: 1;
+				visibility: visible;
+				transform: translate(0, 0);
+			}
 		}
 	}
-
 	&__image {
 		margin: 66px 0 20px 0;
 		width: 100%;
@@ -53,52 +57,70 @@
 	}
 	&__pulse {
 		position: absolute;
-		opacity: 0;
-		transform: translate(-28%, 0);
-		transition: all 0.6s ease 0s;
-		._active {
-			opacity: 1;
-			visibility: visible;
-			transform: translate(28%, 0);
-		}
+		width: 400px;
 	}
 	.pulse-1 {
-		top: 28%;
+		top: 24%;
 		left: 20%;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(-100%, 0);
+		transition: all 0.6s ease 0s;
+		&._active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
+		}
 	}
 	.pulse-2 {
-		bottom: 40%;
+		bottom: 36%;
 		right: 12%;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(120%, 0);
+		transition: all 0.6s ease 0s;
+		&._active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
+		}
 	}
 	.pulse-3 {
-		bottom: 8%;
+		bottom: 4%;
 		right: 11%;
+		opacity: 0;
+		visibility: hidden;
+		transform: translate(120%, 0);
+		transition: all 0.6s ease 0s;
+		&._active {
+			opacity: 1;
+			visibility: visible;
+			transform: translate(0, 0);
+		}
 	}
 	&__pulse-wrapper {
 		position: relative;
-		width: 400px;
-	}
-	&__pulse-circle {
-		display: block;
-		width: 11px;
-		height: 11px;
-		border-radius: 50%;
-		background: $white;
-		cursor: pointer;
-		box-shadow: 0 0 0 rgba(255, 255, 255, 1);
-		animation: pulse 1s infinite;
-		&:hover {
-			animation: none;
-		}
+		width: 40px;
 		&:hover .main__pulse-text {
 			opacity: 1;
 			visibility: visible;
 		}
 	}
+	&__pulse-circle {
+		position: relative;
+		svg {
+			cursor: pointer;
+			&:hover .pulse {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
 	&__pulse-text {
 		position: absolute;
-		top: -8px;
-		left: 42px;
+		top: 36px;
+		left: 80px;
+		width: 400px;
 		bottom: 0;
 		right: 0;
 		opacity: 0;
@@ -110,16 +132,29 @@
 		backdrop-filter: blur(1px);
 		transition: all 0.5s ease 0s;
 	}
+	circle {
+		fill: $white;
+		stroke: $white;
+		stroke-width: 2px;
+		stroke-opacity: 1;
+	}
+	.pulse {
+		fill-opacity: 0;
+		transform-origin: 50% 50%;
+		animation: pulse 1s infinite;
+		transition: all 0.3s ease 0s;
+	}
 }
 @keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+	from {
+		stroke-width: 3px;
+		stroke-opacity: 1;
+		transform: scale(0.3);
 	}
-	70% {
-		box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
-	}
-	100% {
-		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	to {
+		stroke-width: 0;
+		stroke-opacity: 0;
+		transform: scale(2);
 	}
 }
 
@@ -137,7 +172,7 @@
 		}
 	}
 }
-@media (max-width: 960px) {
+@media (max-width: 1110px) {
 	.main {
 		&__wrapper {
 			h1 {
@@ -148,6 +183,28 @@
 				font-size: 20px;
 				line-height: 140%;
 			}
+		}
+		#text3 {
+			width: 300px;
+		}
+		.pulse-1 {
+			top: 24%;
+			left: 20%;
+		}
+		.pulse-2 {
+			bottom: 36%;
+			right: 12%;
+		}
+		.pulse-3 {
+			bottom: 4%;
+			right: 2%;
+		}
+	}
+}
+@media (max-width: 900px) {
+	.main {
+		&__pulse {
+			display: none;
 		}
 	}
 }

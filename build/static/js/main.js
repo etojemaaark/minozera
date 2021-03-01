@@ -57,13 +57,9 @@ if (animItems.length > 0) {
 } /// burger ///
 
 
-var menuBurger = document.querySelector('header__burger');
-var menu = document.querySelector('header__menu');
-menuBurger.addEventListener('click', myFunction);
-
-function myFunction() {
-  menuBurger.classList.toggle('active');
-  menu.classList.toggle('active');
-}
-
-;
+var menuBurger = document.querySelector('.header__burger');
+var menu = document.querySelector('.header__menu-list');
+menuBurger.addEventListener('click', function () {
+  menuBurger.classList.toggle('_active');
+  menu.classList.toggle('_active');
+});

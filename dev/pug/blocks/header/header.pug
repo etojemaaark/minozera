@@ -5,7 +5,7 @@ header.header
 				.header__left
 					a.header__logo(href="##") 
 						img(src="static/images/general/logo.png", alt="Министерские озера")
-					nav.header__menu
+					nav
 						ul.header__menu-list
 							li
 								a.header__menu-link(href="##") О комплексе
@@ -17,6 +17,12 @@ header.header
 								a.header__menu-link(href="##") Документы
 							li
 								a.header__menu-link(href="##") Контакты
+							li
+								a.header__mob-phone(href="tel:88008888888")
+									+icon('phone')
+									p 8 800-888-88-888
+							li
+								a.header__mob-callback._btn(href="#") ОБРАТНЫЙ ЗВОНОК
 				.header__right
 					a.header__phone(href="tel:88008888888")
 						+icon('phone')
