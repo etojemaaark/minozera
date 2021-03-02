@@ -13,9 +13,10 @@ html(lang="ru-RU")
 		meta(name="keywords" content="")
 		meta(name="description" content=description)
 		link(href="static/images/general/favicon.svg" rel="shortcut icon" type="image/svg")
+		link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
 		link(rel="stylesheet" type='text/css' href="static/css/styles.min.css")
 		<!--[if lt IE 9]>
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js" defer)
+		//- script(src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js" defer)
 		<![endif]-->
 	body
 		
@@ -33,7 +34,7 @@ html(lang="ru-RU")
 		block content
 
 
-
+		script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
 		script(src="static/js/main.js")
 		//- script(src="static/js/libs.min.js")
 		//- script(src="https://api-maps.yandex.ru/2.1/?apikey=d5f354d9-0b87-4702-bc6b-201ec476b09a&lang=ru_RU")

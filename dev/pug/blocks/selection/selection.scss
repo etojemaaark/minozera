@@ -36,6 +36,7 @@
 		overflow: hidden;
 		border-radius: 5px;
 		margin-right: 60px;
+		max-width: 237px;
 	}
 	&__checkbox-item {
 		display: inline-block;
@@ -161,9 +162,11 @@
 }
 @media (max-width: 850px) {
 	.selection {
+		background-color: $bgc;
 		&__checkbox-group,
 		&__price-group {
 			margin-right: 0;
+			border: 1px solid $accent3;
 		}
 		&__checkbox-group {
 			margin-right: 50px;
@@ -202,13 +205,40 @@
 }
 @media (max-width: 540px) {
 	.selection {
+		background-color: $white;
+		&__checkbox-group,
+		&__price-group {
+			margin-right: 0;
+			border: none;
+		}
+		&__topline {
+			align-items: flex-start;
+		}
 		&__left {
+			align-items: flex-start;
 			strong {
 				font-size: 24px;
 			}
 		}
+		&__right {
+			justify-content: flex-start;
+		}
 		&__filtres {
 			align-items: flex-start;
+		}
+	}
+}
+@media (max-width: 400px) {
+	.selection {
+		&__price-group {
+			p {
+				padding: 10px 10px;
+			}
+			#price-1,
+			#price-2 {
+				max-width: 125px;
+				padding: 10px 15px;
+			}
 		}
 	}
 }
