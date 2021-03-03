@@ -110,7 +110,6 @@ body {
 }
 
 @media (max-width: 1350px) {
-
 	._h2 {
 		font-size: 50px;
 	}
@@ -139,7 +138,7 @@ body {
 @import "../../pug/blocks/main/main";
 @import "../../pug/blocks/selection/selection";
 @import "../../pug/blocks/citys/citys";
-// @import "../../pug/blocks/advantages/advantages";
+@import "../../pug/blocks/advantages/advantages";
 // @import "../../pug/blocks/sticky/sticky";
 // @import "../../pug/blocks/genplan/genplan";
 // @import "../../pug/blocks/map/map";
