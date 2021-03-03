@@ -118,10 +118,10 @@ const swiper = new Swiper(".citys__slider", {
 	slidesPerView: 1.1,
 	// spaceBetween: '28',
 	grabCursor: true,
-	// autoplay: {
-	// 	delay: 1000,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 1000,
+		disableOnInteraction: false,
+	},
 	loop: true,
 	speed: 1000,
 	// breakpoints: {
