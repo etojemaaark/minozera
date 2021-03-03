@@ -1,18 +1,29 @@
 .sticky {
 	padding-top: 60px;
-	padding-bottom: 1000px;
+	padding-bottom: 2000px;
 	background-color: $bgc;
 	&__wrapper {
 		display: grid;
-		grid-template: 1fr / 25% 75%;
+		grid-template: 1fr / minmax(380px, 25%) minmax(380px, 75%);
 	}
 	&__sidebar {
 		position: relative;
+		width: 380px;
 	}
 	&__sidebar-wrapper {
 		display: flex;
 		position: sticky;
 		top: 100px;
+	}
+	#first-circle {
+		background-color: $text;
+		width: 12px;
+		height: 12px;
+		left: -45px;
+	}
+	#first-link {
+		color: $text;
+		font-weight: 700;
 	}
 	&__sidebar-list {
 		max-width: 393px;
@@ -29,8 +40,45 @@
 		font-size: 18px;
 		line-height: 140%;
 		color: #828282;
+		&.active {
+			color: $text;
+			font-weight: 700;
+		}
 	}
-	&__content {
+	&__progress {
+		margin: 10px 38px 10px 0;
+		position: relative;
+	}
+	&__progress-bar {
+		width: 3px;
+		height: 100%;
+		border-radius: 5px;
+		background-color: #828282;
+	}
+	&__progress-bar--increment {
+		background-color: $text;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 3px;
+		height: 0;
+		border-radius: 5px;
+	}
+	&__progress-bar--circle {
+		position: absolute;
+		bottom: 6px;
+		left: -44px;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background-color: #828282;
+		transition: all 0.1s;
+		&.active {
+			background-color: $text;
+			width: 12px;
+			height: 12px;
+			left: -45px;
+		}
 	}
 	&__content-item {
 		margin-bottom: 60px;
@@ -41,14 +89,14 @@
 	h3 {
 		margin-bottom: 12px;
 	}
-	.sticky__item-subtitle {
+	&__item-subtitle {
 		font-size: 18px;
 		line-height: 140%;
 		color: $text;
 		margin-bottom: 30px;
 		max-width: 700px;
 	}
-	.sticky__image {
+	&__image {
 		min-height: 365px;
 		max-width: 100%;
 		width: 100%;
@@ -56,9 +104,13 @@
 	}
 	#content-item-1 {
 		display: flex;
+		min-width: 387px;
 		.sticky__item-text {
 			margin-right: 30px;
 			max-width: 387px;
+		}
+		.sticky__image {
+			min-width: 387px;
 		}
 	}
 	#content-item-2 {
@@ -116,71 +168,63 @@
 		}
 	}
 }
-@media (max-width: 1440px) {
+@media (max-width: 1170px) {
 	.sticky {
-		#sticky__content-img,
-		#sticky__content-text-1 {
-			width: 100%;
+		#content-item-1,
+		#content-item-5 {
+			flex-direction: column;
+			.sticky__item-text {
+				max-width: 100%;
+			}
 		}
 	}
 }
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
 	.sticky {
+		&__wrapper {
+			display: block;
+		}
 		&__sidebar {
 			display: none;
 		}
+		&__item-text {
+			max-width: auto;
+		}
 	}
 }
-@media (max-width: 767px) {
-	.sticky {
-		padding: 0;
-	}
-}
-@media (max-width: 539px) {
+@media (max-width: 768px) {
 	.sticky {
 		padding-top: 30px;
-		h3 {
-			max-width: 320px;
+		&__content-item {
+			margin-bottom: 30px;
 		}
-		background-color: $white;
-		&__content-text-subtitle {
-			font-size: 16px;
-			// max-width: 320px;
+		#content-item-1,
+		#content-item-5 {
+			flex-direction: column;
+			.sticky__item-text,
+			.sticky__item-subtitle,
+			h3 {
+				width: 100%;
+			}
+			.sticky__image {
+				min-height: 250px;
+			}
 		}
 	}
 }
-
-/* Navbar - Progress Bar */
-
-.sticky__progress {
-	margin: 10px 38px 10px 0;
-	position: relative;
-}
-.sticky__progress-bar {
-	width: 3px;
-	height: 100%;
-	border-radius: 5px;
-	background-color: #828282;
-}
-.sticky__progress-bar--increment {
-	background-color: $text;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 3px;
-	height: 0;
-	border-radius: 5px;
-}
-.sticky__progress-bar--circle {
-	position: absolute;
-	bottom: 6px;
-	left: -44px;
-	width: 9px;
-	height: 9px;
-	border-radius: 50%;
-	background-color: #828282;
-	transition: all 0.1s;
-	&.active {
-		background-color: $text;
+@media (max-width: 540px) {
+	.sticky {
+		background-color: $white;
+		&__item-subtitle {
+			font-size: 14px;
+		}
+		#content-item-1,
+		#content-item-5 {
+			min-width: 280px;
+			.sticky__image {
+				min-height: 150px;
+				min-width: 280px;
+			}
+		}
 	}
 }

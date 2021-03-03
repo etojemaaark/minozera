@@ -158,60 +158,41 @@ $(document).ready(function () {
 	//highlight navigation
 	$(window).scroll(function () {
 		var windowpos = $(window).scrollTop();
-		$('.sticky__sidebar-list').removeClass('active');
+		$('.sticky__sidebar-link').removeClass('active');
 		$('.sticky__progress-bar--circle').removeClass('active');
 
-		// if (windowpos > $('#content-item-1').offset().top) {
-		// 	$('nav li a').removeClass('active');
-		// 	$('a[href$="#top"]').addClass('active');
-		// } //windowpos
-
 		if (windowpos > $('#content-item-1').offset().top) {
-			$('.sticky__sidebar-list').removeClass('active');
 			$('a[href$="#content-item-1"]').addClass('active');
 			$('a[href$="#content-item-1"] .sticky__progress-bar--circle').addClass('active');
-		} //windowpos
+		}
 		if (windowpos > $('#content-item-2').offset().top) {
-			$('.sticky__sidebar-list').removeClass('active');
 			$('a[href$="#content-item-2"]').addClass('active');
 			$('a[href$="#content-item-2"] .sticky__progress-bar--circle').addClass('active');
-		} //windowpos
-
+		}
 		if (windowpos > $('#content-item-3').offset().top) {
-			$('.sticky__sidebar-list').removeClass('active');
 			$('a[href$="#content-item-3"]').addClass('active');
 			$('a[href$="#content-item-3"] .sticky__progress-bar--circle').addClass('active');
-		} //windowpos
-
+		}
 		if (windowpos > $('#content-item-4').offset().top) {
-			$('.sticky__sidebar-list').removeClass('active');
 			$('a[href$="#content-item-4"]').addClass('active');
 			$('a[href$="#content-item-4"] .sticky__progress-bar--circle').addClass('active');
-		} //windowpos
+		}
 		if (windowpos > $('#content-item-5').offset().top) {
-			$('.sticky__sidebar-list').removeClass('active');
 			$('a[href$="#content-item-5"]').addClass('active');
 			$('a[href$="#content-item-5"] .sticky__progress-bar--circle').addClass('active');
-		} //windowpos
-
-		// if (windowpos > $('#bottom').offset().top) {
-		// 	$('nav li a').removeClass('active');
-		// 	$('a[href$="#bottom"]').addClass('active');
-		// } //windowpos
-
+		}
 		// Scrollbar progression
 		// pixels scrolled from top
-		var scrollTop = $(window).scrollTop(),
+		var scrollTop = ($(window).scrollTop()) - ($('.sticky').offset().top),
 			// document height
-			docHeight = $(document).height(),
+			docHeight = $('.sticky').height(),
 			// window height
 			winHeight = $(window).height(),
 			// percent of document scrolled
-			scrollPercent = (scrollTop) / (docHeight - winHeight),
+			scrollPercent = scrollTop / docHeight,
 			scrollPercentRounded = Math.round(scrollPercent * 100);
 
 		// incement progress bar as user scrolls
 		$('.sticky__progress-bar--increment').css('height', scrollPercentRounded + '%');
 	});
-
-}); // on load
+});
