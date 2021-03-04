@@ -2,34 +2,30 @@
 
 /// header ///
 // Фиксирование шапки
-function headerFixed() {
-  var mediaQuery = window.matchMedia('(min-width: 820px)');
-
-  if (mediaQuery.matches) {
-    var header = document.getElementsByClassName('header'),
-        offsetHeight = header.offsetHeight;
-    window.addEventListener('load', function () {
-      var height = window.innerHeight;
-      var lostY = 0;
-      document.addEventListener('scroll', function () {
-        header.classList.add('_header-fixed');
-
-        if (lostY >= 900) {
-          if (window.scrollY > lostY) {
-            header.classList.add('_header-fixed');
-          } else {
-            if (window.scrollY > height || lostY < offsetHeight) header.classList.remove('_header-fixed');
-          }
-        }
-
-        lostY = window.scrollY;
-      });
-    });
-  }
-}
-
-headerFixed(); /// anim scroll ///
-
+// function headerFixed() {
+// 	const mediaQuery = window.matchMedia('(min-width: 820px)');
+// 	if (mediaQuery.matches) {
+// 		const header = document.getElementsByClassName('header'),
+// 			offsetHeight = header.offsetHeight;
+// 		window.addEventListener('load', () => {
+// 			const height = window.innerHeight;
+// 			let lostY = 0;
+// 			document.addEventListener('scroll', () => {
+// 				header.classList.add('_header-fixed');
+// 				if (lostY >= 900) {
+// 					if (window.scrollY > lostY) {
+// 						header.classList.add('_header-fixed');
+// 					} else {
+// 						if (window.scrollY > height || lostY < offsetHeight) header.classList.remove('_header-fixed');
+// 					}
+// 				}
+// 				lostY = window.scrollY;
+// 			});
+// 		});
+// 	}
+// }
+// headerFixed();
+/// anim scroll ///
 var animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -155,19 +151,19 @@ var swiperCitys = new Swiper(".citys__slider", {
 }); /// swiper /// 
 
 var swiperPlaces = new Swiper(".places__slider", {
-  loop: true,
+  // loop: true,
   // zoom: true,
   speed: 1000,
-  autoplay: {
-    delay: 1000,
-    disableOnInteraction: false
-  },
+  // autoplay: {
+  // 	delay: 1000,
+  // 	disableOnInteraction: false,
+  // },
   slidesPerView: 'auto',
   // spaceBetween: '30',
   grabCursor: true,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev'
   } // pagination: {
   // 	el: '.citys__slider-progressbar',
   // 	type: 'progressbar',

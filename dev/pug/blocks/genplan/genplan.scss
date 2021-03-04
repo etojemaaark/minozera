@@ -30,13 +30,22 @@
 	.frukt-path,
 	.detstvo-path,
 	.comfort-path,
+	.business-path,
 	.detsad-path,
-	.biznes-path,
-	.shkola-path {
+	.school-path {
 		path,
 		rect {
 			fill-opacity: 0;
 			transition: all 0.4s ease 0s;
+		}
+	}
+	.detsad-path,
+	.school-path {
+		path,
+		rect {
+			&:hover {
+				fill-opacity: 0.7;
+			}
 		}
 	}
 	.frukt-text {
@@ -47,6 +56,18 @@
 				fill-opacity: 0.7;
 			}
 		}
+		&:hover .frukt-full {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	.frukt-full,
+	.detstvo-full,
+	.comfort-full,
+	.business-full {
+		transition: all 0.4s ease 0s;
+		opacity: 0;
+		visibility: hidden;
 	}
 	.detstvo-text {
 		cursor: pointer;
@@ -55,6 +76,10 @@
 			rect {
 				fill-opacity: 0.7;
 			}
+		}
+		&:hover .detstvo-full{
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 	.comfort-text {
@@ -65,14 +90,22 @@
 				fill-opacity: 0.7;
 			}
 		}
+		&:hover .comfort-full{
+			opacity: 1;
+			visibility: visible;
+		}
 	}
-	.biznes-text {
+	.business-text {
 		cursor: pointer;
-		&:hover .biznes-path {
+		&:hover .business-path {
 			path,
 			rect {
 				fill-opacity: 0.7;
 			}
+		}
+		&:hover .business-full{
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

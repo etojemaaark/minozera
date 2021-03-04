@@ -1,30 +1,28 @@
 /// header ///
 // Фиксирование шапки
-function headerFixed() {
-	const mediaQuery = window.matchMedia('(min-width: 820px)');
-	if (mediaQuery.matches) {
-		const header = document.getElementsByClassName('header'),
-			offsetHeight = header.offsetHeight;
-		window.addEventListener('load', () => {
-			const height = window.innerHeight;
-			let lostY = 0;
-			document.addEventListener('scroll', () => {
-				header.classList.add('_header-fixed');
-				if (lostY >= 900) {
-					if (window.scrollY > lostY) {
-						header.classList.add('_header-fixed');
-					} else {
-						if (window.scrollY > height || lostY < offsetHeight) header.classList.remove('_header-fixed');
-					}
-				}
-				lostY = window.scrollY;
-			});
-
-		});
-
-	}
-}
-headerFixed();
+// function headerFixed() {
+// 	const mediaQuery = window.matchMedia('(min-width: 820px)');
+// 	if (mediaQuery.matches) {
+// 		const header = document.getElementsByClassName('header'),
+// 			offsetHeight = header.offsetHeight;
+// 		window.addEventListener('load', () => {
+// 			const height = window.innerHeight;
+// 			let lostY = 0;
+// 			document.addEventListener('scroll', () => {
+// 				header.classList.add('_header-fixed');
+// 				if (lostY >= 900) {
+// 					if (window.scrollY > lostY) {
+// 						header.classList.add('_header-fixed');
+// 					} else {
+// 						if (window.scrollY > height || lostY < offsetHeight) header.classList.remove('_header-fixed');
+// 					}
+// 				}
+// 				lostY = window.scrollY;
+// 			});
+// 		});
+// 	}
+// }
+// headerFixed();
 /// anim scroll ///
 
 const animItems = document.querySelectorAll('._anim-items');
@@ -153,20 +151,20 @@ const swiperCitys = new Swiper(".citys__slider", {
 /// swiper /// 
 
 const swiperPlaces = new Swiper(".places__slider", {
-	loop: true,
+	// loop: true,
 	// zoom: true,
 	speed: 1000,
-	autoplay: {
-		delay: 1000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 1000,
+	// 	disableOnInteraction: false,
+	// },
 	slidesPerView: 'auto',
 
 	// spaceBetween: '30',
 	grabCursor: true,
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
+		nextEl: '.swiper-next',
+		prevEl: '.swiper-prev'
 	},
 	// pagination: {
 	// 	el: '.citys__slider-progressbar',

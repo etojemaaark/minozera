@@ -24,7 +24,7 @@ aside {
 }
 html,
 body {
-	overflow-x: hidden;
+	// overflow-x: hidden;
 	height: 100%;
 	width: 100%;
 	line-height: 1;
@@ -33,7 +33,11 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-
+body {
+	overflow-x: hidden;
+	height: 100%;
+	width: 100%;
+}
 input,
 button,
 textarea {
