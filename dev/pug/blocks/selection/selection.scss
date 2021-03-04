@@ -1,15 +1,7 @@
 .selection {
 	padding: 19px 0;
 	background-color: $white;
-	opacity: 0;
-	visibility: hidden;
-	transform: translate(0, 30%);
 	transition: all 0.6s ease 0s;
-	&._active {
-		opacity: 1;
-		visibility: visible;
-		transform: translate(0, 0);
-	}
 	&__topline {
 		display: flex;
 		justify-content: space-between;

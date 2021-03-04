@@ -1,15 +1,30 @@
 /// header ///
+// Фиксирование шапки
+function headerFixed() {
+	const mediaQuery = window.matchMedia('(min-width: 820px)');
+	if (mediaQuery.matches) {
+		const header = document.getElementsByClassName('header'),
+			offsetHeight = header.offsetHeight;
+		window.addEventListener('load', () => {
+			const height = window.innerHeight;
+			let lostY = 0;
+			document.addEventListener('scroll', () => {
+				header.classList.add('_header-fixed');
+				if (lostY >= 900) {
+					if (window.scrollY > lostY) {
+						header.classList.add('_header-fixed');
+					} else {
+						if (window.scrollY > height || lostY < offsetHeight) header.classList.remove('_header-fixed');
+					}
+				}
+				lostY = window.scrollY;
+			});
 
-window.onscroll = function showHeader() {
-	if (window.innerWidth > 820) {
-		let header = document.querySelector('.header__fixed-wrapper');
-		if (window.pageYOffset > 43) {
-			header.classList.add('_header-fixed');
-		} else {
-			header.classList.remove('_header-fixed');
-		}
+		});
+
 	}
 }
+headerFixed();
 /// anim scroll ///
 
 const animItems = document.querySelectorAll('._anim-items');
@@ -66,7 +81,6 @@ var maskedInputs = document.querySelectorAll("[data-mask]");
 for (var index = 0; index < maskedInputs.length; index++) {
 	maskedInputs[index].addEventListener('input', maskInput);
 }
-
 function maskInput() {
 	var input = this;
 	var mask = input.dataset.mask;
@@ -101,7 +115,7 @@ function maskInput() {
 
 /// swiper /// 
 
-const swiper = new Swiper(".citys__slider", {
+const swiperCitys = new Swiper(".citys__slider", {
 	// navigation: {
 	// 	nextEl: '.swiper-button-next',
 	// 	prevEl: '.swiper-button-prev'
@@ -114,7 +128,7 @@ const swiper = new Swiper(".citys__slider", {
 	// 	el: '.citys__slider-scrollbar',
 	// 	draggable: true,
 	// },
-	slidesPerView: 1.1,
+	slidesPerView: 'auto',
 	// spaceBetween: '28',
 	grabCursor: true,
 	autoplay: {
@@ -123,6 +137,45 @@ const swiper = new Swiper(".citys__slider", {
 	},
 	loop: true,
 	speed: 1000,
+	// breakpoints: {
+	// 	1707: {
+	// 		slidesPerView: 3,
+	// 	},
+	// 	1440: {
+	// 		slidesPerView: 2,
+	// 	},
+	// 	0: {
+	// 		slidesPerView: 1,
+	// 	}
+	// }
+});
+
+/// swiper /// 
+
+const swiperPlaces = new Swiper(".places__slider", {
+	loop: true,
+	// zoom: true,
+	speed: 1000,
+	autoplay: {
+		delay: 1000,
+		disableOnInteraction: false,
+	},
+	slidesPerView: 'auto',
+
+	// spaceBetween: '30',
+	grabCursor: true,
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev'
+	},
+	// pagination: {
+	// 	el: '.citys__slider-progressbar',
+	// 	type: 'progressbar',
+	// },
+	// scrollbar: {
+	// 	el: '.citys__slider-scrollbar',
+	// 	draggable: true,
+	// },
 	// breakpoints: {
 	// 	1707: {
 	// 		slidesPerView: 3,
