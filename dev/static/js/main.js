@@ -13,7 +13,6 @@ window.onscroll = function showHeader() {
 /// anim scroll ///
 
 const animItems = document.querySelectorAll('._anim-items');
-
 if (animItems.length > 0) {
 	window.addEventListener('scroll', animOnScroll);
 	function animOnScroll() {
@@ -46,7 +45,7 @@ if (animItems.length > 0) {
 
 	setTimeout(() => {
 		animOnScroll();
-	}, 100);
+	}, 300);
 }
 
 /// burger ///
@@ -136,6 +135,8 @@ const swiper = new Swiper(".citys__slider", {
 	// 	}
 	// }
 });
+
+/// scroll sidebar ///
 
 $(document).ready(function () {
 

@@ -53,7 +53,7 @@ if (animItems.length > 0) {
 
   setTimeout(function () {
     animOnScroll();
-  }, 100);
+  }, 300);
 } /// burger ///
 
 
@@ -136,7 +136,8 @@ var swiper = new Swiper(".citys__slider", {
   // 	}
   // }
 
-});
+}); /// scroll sidebar ///
+
 $(document).ready(function () {
   // Anchor arrow click
   // smooth scroll to anchor tag
