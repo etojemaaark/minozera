@@ -166,10 +166,10 @@ const swiperPlaces = new Swiper(".places__slider", {
 		nextEl: '.swiper-next',
 		prevEl: '.swiper-prev'
 	},
-	// pagination: {
-	// 	el: '.citys__slider-progressbar',
-	// 	type: 'progressbar',
-	// },
+	pagination: {
+		el: '.swiper-pagination-progressbar',
+		type: 'progressbar',
+	},
 	// scrollbar: {
 	// 	el: '.citys__slider-scrollbar',
 	// 	draggable: true,
@@ -248,3 +248,4 @@ $(document).ready(function () {
 		$('.sticky__progress-bar--increment').css('height', scrollPercentRounded + '%');
 	});
 });
+

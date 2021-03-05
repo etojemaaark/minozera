@@ -164,11 +164,11 @@ var swiperPlaces = new Swiper(".places__slider", {
   navigation: {
     nextEl: '.swiper-next',
     prevEl: '.swiper-prev'
-  } // pagination: {
-  // 	el: '.citys__slider-progressbar',
-  // 	type: 'progressbar',
-  // },
-  // scrollbar: {
+  },
+  pagination: {
+    el: '.swiper-pagination-progressbar',
+    type: 'progressbar'
+  } // scrollbar: {
   // 	el: '.citys__slider-scrollbar',
   // 	draggable: true,
   // },

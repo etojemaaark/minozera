@@ -80,20 +80,22 @@ body {
 	}
 }
 ._ibg {
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	position: relative;
-	img {
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		opacity: 0;
-		visibility: hidden;
-		object-fit: cover;
-	}
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
+	position: relative !important;
+	
+
+	// img {
+	// 	width: 0;
+	// 	height: 0;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	left: 0;
+	// 	opacity: 0;
+	// 	visibility: hidden;
+	// 	object-fit: cover;
+	// }
 }
 ._h2 {
 	font-weight: 500;
