@@ -1,0 +1,29 @@
+section.s-map
+	.container
+		h2._h2 Инфраструктура района
+		.s-map__content
+			button(type='button' data-value='all')
+				span Все
+			button(type='button' data-value='one')
+				.s-map__icon
+					svg.svg-sprite-icon.icon-mark-cafe
+						use(xlink:href='static/images/svg/symbol/sprite.svg#mark-cafe')
+				span Кафе и рестораны
+			button(type='button' data-value='two')
+				.s-map__icon
+					svg.svg-sprite-icon.icon-mark-hospital
+						use(xlink:href='static/images/svg/symbol/sprite.svg#mark-hospital')
+				span Больницы и аптеки
+			button(type='button' data-value='five')
+				.s-map__icon
+					svg.svg-sprite-icon.icon-mark-school
+						use(xlink:href='static/images/svg/symbol/sprite.svg#mark-school')
+				span Школы и детские сады
+			button(type='button' data-value='three')
+				.s-map__icon
+					svg.svg-sprite-icon.icon-mark-rest
+						use(xlink:href='static/images/svg/symbol/sprite.svg#mark-rest')
+				span Отдых и развлечения
+	.s-map__wrap-map
+		#map-ctrl Используйте Ctrl + scroll, чтобы увеличить карту.
+		#map

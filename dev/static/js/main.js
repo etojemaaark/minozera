@@ -154,10 +154,10 @@ const swiperPlaces = new Swiper(".places__slider", {
 	// loop: true,
 	// zoom: true,
 	speed: 1000,
-	// autoplay: {
-	// 	delay: 1000,
-	// 	disableOnInteraction: false,
-	// },
+	autoplay: {
+		delay: 1000,
+		disableOnInteraction: false,
+	},
 	slidesPerView: 'auto',
 
 	// spaceBetween: '30',

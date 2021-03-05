@@ -480,8 +480,50 @@
         </button>
       </div>
     </section>
+    <section class="s-map">
+      <div class="container">
+        <h2 class="_h2">Инфраструктура района</h2>
+        <div class="s-map__content">
+          <button type="button" data-value="all"><span>Все</span></button>
+          <button type="button" data-value="one">
+            <div class="s-map__icon">
+              <svg class="svg-sprite-icon icon-mark-cafe">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#mark-cafe"></use>
+              </svg>
+            </div><span>Кафе и рестораны</span>
+          </button>
+          <button type="button" data-value="two">
+            <div class="s-map__icon">
+              <svg class="svg-sprite-icon icon-mark-hospital">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#mark-hospital"></use>
+              </svg>
+            </div><span>Больницы и аптеки</span>
+          </button>
+          <button type="button" data-value="five">
+            <div class="s-map__icon">
+              <svg class="svg-sprite-icon icon-mark-school">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#mark-school"></use>
+              </svg>
+            </div><span>Школы и детские сады</span>
+          </button>
+          <button type="button" data-value="three">
+            <div class="s-map__icon">
+              <svg class="svg-sprite-icon icon-mark-rest">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#mark-rest"></use>
+              </svg>
+            </div><span>Отдых и развлечения</span>
+          </button>
+        </div>
+      </div>
+      <div class="s-map__wrap-map">
+        <div id="map-ctrl">Используйте Ctrl + scroll, чтобы увеличить карту.</div>
+        <div id="map"></div>
+      </div>
+    </section>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="static/js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d5f354d9-0b87-4702-bc6b-201ec476b09a&amp;lang=ru_RU"></script>
+    <script src="static/js/map.js"></script>
   </body>
 </html>

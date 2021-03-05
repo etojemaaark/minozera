@@ -1,7 +1,6 @@
 .places {
 	overflow: hidden;
 	padding-top: 60px;
-	padding-bottom: 200px;
 	&__slider {
 		overflow: visible;
 		&::before {
@@ -25,8 +24,9 @@
 		display: flex;
 		align-items: flex-end;
 		padding: 25px;
-		min-height: 240px;
+		min-height: 211px;
 		border-radius: 5px;
+
 		&::after {
 			content: "";
 			position: absolute;
@@ -96,7 +96,6 @@
 }
 .swiper-pagination-progressbar {
 	display: none;
-	margin-top: 20px;
 	position: relative;
 	width: 110% !important;
 	height: 1px !important;
@@ -121,7 +120,12 @@
 		display: block;
 	}
 }
-@media (max-width: 400px) {
+@media (max-width: 540px) {
+	.places {
+		padding-top: 30px;
+	}
+}
+@media (max-width: 420px) {
 	.swiper-pagination-progressbar {
 		width: 100% !important;
 	}
