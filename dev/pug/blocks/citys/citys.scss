@@ -30,7 +30,7 @@
 		justify-content: space-between;
 	}
 	&__image {
-		min-height: 380px;
+		min-height: 365px;
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 30px;
@@ -64,7 +64,7 @@
 		}
 	}
 	&__slider-image {
-		min-height: 211px;
+		min-height: 250px;
 		overflow: hidden;
 		position: relative;
 		margin-bottom: 12px;
@@ -83,7 +83,7 @@
 		width: 100% !important;
 		height: 1px !important;
 		background-color: $gray !important;
-		// height: 1px !important;
+		margin-bottom: 0px !important;
 	}
 	.swiper-pagination-progressbar-fill {
 		position: absolute;
@@ -144,7 +144,7 @@
 			}
 		}
 		&__image {
-			min-height: 380px;
+			min-height: 250px;
 		}
 	}
 }
@@ -168,7 +168,7 @@
 			}
 		}
 		&__image {
-			min-height: 211px;
+			min-height: 220px;
 			margin-bottom: 12px;
 		}
 		&__slider-item {

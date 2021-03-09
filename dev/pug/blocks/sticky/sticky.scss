@@ -212,6 +212,9 @@
 		&__item-text {
 			max-width: auto;
 		}
+		&__image {
+			min-height: 300px;
+		}
 	}
 }
 @media (max-width: 768px) {
