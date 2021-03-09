@@ -176,7 +176,6 @@
 @media (max-width: 900px) {
 	.header {
 		background-color: $white !important;
-
 		&__wrapper {
 			height: 76px !important;
 		}
@@ -235,6 +234,14 @@
 		}
 		&__burger {
 			display: block;
+		}
+	}
+}
+@media (max-width: 540px) {
+	.header {
+		&__menu-list {
+			min-width: 100%;
+			right: 0;
 		}
 	}
 }
