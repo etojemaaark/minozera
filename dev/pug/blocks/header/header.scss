@@ -1,4 +1,14 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: all 0.3s ease 0s;
+	z-index: 9999;
+	background-color: #fff;
+	&._active {
+		transform: translateY(-100%);
+	}
 	&__wrapper {
 		padding: 15px 0;
 		display: flex;
@@ -13,19 +23,6 @@
 		// 	transform: translate(0, 0);
 		// }
 	}
-	// &._header-fixed {
-	// 	background-color: $white;
-	// 	transition: all 0.3s ease 0s;
-	// 	animation: show_header 0.7s;
-	// 	@keyframes show_header {
-	// 		0% {
-	// 			top: -43px;
-	// 		}
-	// 		100% {
-	// 			top: 0;
-	// 		}
-	// 	}
-	// }
 	&__left {
 		display: flex;
 		align-items: center;
@@ -178,9 +175,8 @@
 }
 @media (max-width: 900px) {
 	.header {
-		&__fixed-wrapper {
-			background-color: $white !important;
-		}
+		background-color: $white !important;
+
 		&__wrapper {
 			height: 76px !important;
 		}

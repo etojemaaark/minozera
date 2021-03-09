@@ -1,4 +1,4 @@
-.places {
+.videos {
 	overflow: hidden;
 	padding-top: 60px;
 	background-color: $bgc3;
@@ -16,7 +16,6 @@
 		padding: 25px;
 		min-height: 211px;
 		border-radius: 5px;
-
 		&::after {
 			content: "";
 			position: absolute;
@@ -55,7 +54,7 @@
 }
 
 @media (max-width: 540px) {
-	.places {
+	.videos {
 		padding-top: 30px;
 		background-color: $white;
 	}

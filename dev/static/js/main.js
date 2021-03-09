@@ -129,10 +129,10 @@ const swiperCitys = new Swiper(".citys__slider", {
 	slidesPerView: 'auto',
 	// spaceBetween: '28',
 	grabCursor: true,
-	autoplay: {
-		delay: 1000,
-		disableOnInteraction: false,
-	},
+	// autoplay: {
+	// 	delay: 1000,
+	// 	disableOnInteraction: false,
+	// },
 	loop: true,
 	speed: 1000,
 	// breakpoints: {
@@ -154,10 +154,48 @@ const swiperPlaces = new Swiper(".places__slider", {
 	// loop: true,
 	// zoom: true,
 	speed: 1000,
-	autoplay: {
-		delay: 1000,
-		disableOnInteraction: false,
+	// autoplay: {
+	// 	delay: 1000,
+	// 	disableOnInteraction: false,
+	// },
+	slidesPerView: 'auto',
+
+	// spaceBetween: '30',
+	grabCursor: true,
+	navigation: {
+		nextEl: '.swiper-next',
+		prevEl: '.swiper-prev'
 	},
+	pagination: {
+		el: '.swiper-pagination-progressbar',
+		type: 'progressbar',
+	},
+	// scrollbar: {
+	// 	el: '.citys__slider-scrollbar',
+	// 	draggable: true,
+	// },
+	// breakpoints: {
+	// 	1707: {
+	// 		slidesPerView: 3,
+	// 	},
+	// 	1440: {
+	// 		slidesPerView: 2,
+	// 	},
+	// 	0: {
+	// 		slidesPerView: 1,
+	// 	}
+	// }
+});
+/// swiper /// 
+
+const swiperVideos = new Swiper(".videos__slider", {
+	// loop: true,
+	// zoom: true,
+	speed: 1000,
+	// autoplay: {
+	// 	delay: 1000,
+	// 	disableOnInteraction: false,
+	// },
 	slidesPerView: 'auto',
 
 	// spaceBetween: '30',
@@ -249,3 +287,47 @@ $(document).ready(function () {
 	});
 });
 
+/// аккордеон ///
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	});
+}
+var acc = document.getElementsByClassName("footer__title");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+	acc[i].addEventListener("click", function () {
+		this.classList.toggle("active");
+		var panel = this.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	});
+}
+
+
+var header = $('.header'),
+	scrollPrev = 0;
+
+$(window).scroll(function () {
+	var scrolled = $(window).scrollTop();
+
+	if (scrolled > 100 && scrolled > scrollPrev) {
+		header.addClass('_active');
+	} else {
+		header.removeClass('_active');
+	}
+	scrollPrev = scrolled;
+});

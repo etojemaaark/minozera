@@ -1,5 +1,5 @@
 .citys {
-	background-color: $bgc;
+	background-color: $bgc3;
 	z-index: -1;
 	padding-top: 60px;
 	&__subtitle {
@@ -127,7 +127,6 @@
 			max-width: 100%;
 			margin-bottom: 30px;
 		}
-
 	}
 }
 @media (max-width: 870px) {

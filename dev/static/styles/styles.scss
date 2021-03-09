@@ -17,27 +17,6 @@ body {
 	padding: 0 10px;
 	margin: 0 auto;
 }
-// ._header-fixed {
-// 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	bottom: 0;
-// 	right: 0;
-// 	z-index: 99999;
-// 	background-color: $white;
-// 	width: 100%;
-// 	height: 66px;
-// 	transition: all 0.3s ease 0s;
-// 	animation: show_header 0.7s;
-// 	@keyframes show_header {
-// 		0% {
-// 			top: -42px;
-// 		}
-// 		100% {
-// 			top: 0;
-// 		}
-// 	}
-// }
 ._btn {
 	display: inline-block;
 	text-align: center;
@@ -84,7 +63,6 @@ body {
 	background-size: cover !important;
 	background-repeat: no-repeat !important;
 	position: relative !important;
-	
 
 	// img {
 	// 	width: 0;
@@ -110,7 +88,53 @@ body {
 	line-height: 130%;
 	color: $text;
 }
-
+.swiper-next,
+.swiper-prev {
+	position: absolute;
+	top: 56%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: #ffffff;
+	border-radius: 50%;
+	z-index: 2;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+	transition: all 0.2s ease 0s;
+	&:active {
+		transform: scale(1.07);
+	}
+}
+.swiper-prev {
+	left: 90px;
+	svg {
+		transform: scale(-1, 1);
+	}
+}
+.swiper-next {
+	right: 90px;
+	&:hover .icon-next {
+		fill: $accent4;
+	}
+}
+.swiper-pagination-progressbar {
+	display: none;
+	position: relative;
+	width: 100% !important;
+	height: 1px !important;
+	background-color: $gray !important;
+	margin-bottom: 30px;
+}
+.swiper-pagination-progressbar-fill {
+	background: $accent !important;
+	top: -1px !important;
+	height: 3px !important;
+	background-color: $accent !important;
+}
+.swiper-button-disabled {
+	display: none;
+}
 @media (max-width: 1350px) {
 	._h2 {
 		font-size: 50px;
@@ -124,6 +148,15 @@ body {
 		font-size: 26px;
 	}
 }
+@media (max-width: 768px) {
+	.swiper-next,
+	.swiper-prev {
+		display: none;
+	}
+	.swiper-pagination-progressbar {
+		display: block;
+	}
+}
 @media (max-width: 540px) {
 	._h2 {
 		font-size: 24px;
@@ -133,6 +166,12 @@ body {
 		font-size: 18px;
 	}
 }
+@media (max-width: 420px) {
+	.swiper-pagination-progressbar {
+		width: 100% !important;
+	}
+}
+
 ///
 
 /// ПОДКЛЮЧЕНИЕ СЕКЦИЙ ///
@@ -146,4 +185,6 @@ body {
 @import "../../pug/blocks/genplan/genplan";
 @import "../../pug/blocks/places/places";
 @import "../../pug/blocks/map/map";
-
+@import "../../pug/blocks/videos/videos";
+@import "../../pug/blocks/contacts/contacts";
+@import "../../pug/blocks/footer/footer";
