@@ -115,7 +115,7 @@
 		}
 	}
 	&__modal {
-		display: flex;
+		display: none;
 		justify-content: center;
 		position: fixed;
 		z-index: 1;
@@ -176,7 +176,12 @@
 		padding: 4px 0;
 		border-bottom: 2px solid #cccccc;
 		margin-bottom: 51px;
+		&:focus::placeholder {
+			opacity: 0;
+			visibility: hidden;
+		}
 		&::placeholder {
+			transition: all 0.3s ease 0s;
 			color: #cccccc;
 		}
 	}
