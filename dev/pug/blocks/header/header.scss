@@ -3,25 +3,15 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	transition: all 0.3s ease 0s;
-	z-index: 9999;
-	background-color: #fff;
-	&._active {
-		transform: translateY(-100%);
-	}
+	z-index: 99999;
+	background-color: $white;
 	&__wrapper {
 		padding: 15px 0;
 		display: flex;
 		align-items: center;
-		height: 76px;
-		max-width: 100%;
+		// height: 76px;
 		justify-content: space-between;
 		transition: all 0.6s ease 0s;
-		// &._active {
-		// 	opacity: 1;
-		// 	visibility: visible;
-		// 	transform: translate(0, 0);
-		// }
 	}
 	&__left {
 		display: flex;
@@ -37,11 +27,11 @@
 		font-size: 18px;
 		li {
 			margin-right: 70px;
-			&:nth-child(n + 6) {
-				display: none;
-			}
 			&:first-child {
 				width: 115px;
+			}
+			&:nth-child(n + 6):nth-child(-n + 7) {
+				display: none;
 			}
 		}
 	}
@@ -124,10 +114,106 @@
 			}
 		}
 	}
-	&__logo-mob {
-		display: none;
+	&__modal {
+		display: flex;
+		justify-content: center;
+		position: fixed;
+		z-index: 1;
+		padding-top: 57px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	&__modal-content {
+		position: relative;
+		background-color: $bgc3;
+		margin: 20px;
+		padding: 30px;
+		max-width: 470px;
+		max-height: 516px;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		animation: animatetop 0.4s;
+	}
+	&__modal-title {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 140%;
+		color: $text;
+		margin-bottom: 8px;
+	}
+	&__modal-close {
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		top: 20px;
+		right: 20px;
+		cursor: pointer;
+		transform: rotate(0);
+		&:active {
+			animation: animate-rotate 0.5s;
+			transform: rotate(180deg);
+		}
+	}
+	&__modal-subtitle {
+		font-size: 18px;
+		line-height: 140%;
+		color: $text;
+		max-width: 302px;
+		width: 100%;
+		margin-bottom: 41px;
+	}
+	input {
+		font-size: 18px;
+		line-height: 140%;
+		display: block;
+		max-width: 407px;
+		width: 100%;
+		height: 31px;
+		background-color: $bgc3;
+		padding: 4px 0;
+		border-bottom: 2px solid #cccccc;
+		margin-bottom: 51px;
+		&::placeholder {
+			color: #cccccc;
+		}
+	}
+	&__modal-personal {
+		font-size: 12px;
+		line-height: 14px;
+		color: #8f8f8f;
+		span {
+			font-weight: 700;
+			a {
+				color: #8f8f8f;
+			}
+		}
+	}
+	&__modal-btn {
+		margin-bottom: 12px;
+	}
+	@keyframes animatetop {
+		from {
+			top: -300px;
+			opacity: 0;
+		}
+		to {
+			top: 0;
+			opacity: 1;
+		}
+	}
+	@keyframes animate-rotate {
+		from {
+			transform: rotate(0);
+		}
+		to {
+			transform: rotate(180deg);
+		}
 	}
 }
+
 @media (max-width: 1449px) {
 	.header {
 		&__logo {
@@ -173,9 +259,11 @@
 }
 @media (max-width: 900px) {
 	.header {
-		background-color: $white !important;
+		&__fixed-wrapper {
+			background-color: $white !important;
+		}
 		&__wrapper {
-			height: 66px !important;
+			height: 76px !important;
 		}
 		&__left {
 			display: block;
@@ -185,33 +273,28 @@
 			top: 50%;
 			transform: translate(0, -50%);
 		}
-		&__logo-mob {
-			display: block;
-		}
 		&__menu-list {
 			flex-direction: column;
-			align-items: flex-start;
+			padding-left: 30px;
 			transition: all 0.3s ease 0s;
 			transform: translateX(100%);
 			min-width: 320px;
 			height: 100vh;
 			position: absolute;
-			top: 65px;
+			top: 75px;
 			right: -10px;
 			background-color: $white;
-			opacity: 0.95;
-			padding-left: 47px;
 			li {
 				margin-right: 0;
 				margin-top: 20px;
 				&:first-child {
 					width: auto;
 				}
+				&:nth-child(n + 6):nth-child(-n + 7) {
+					display: block;
+				}
 				&:nth-child(6) {
 					margin-top: 70px;
-				}
-				&:nth-child(n + 6) {
-					display: flex;
 				}
 			}
 			&._active {
@@ -220,9 +303,7 @@
 		}
 		&__menu-link {
 			display: inline-flex;
-			font-size: 14px;
-			line-height: 125%;
-			width: 100%;
+			font-size: 24px;
 		}
 		&__mob-phone {
 			display: flex;
@@ -246,8 +327,33 @@
 @media (max-width: 540px) {
 	.header {
 		&__menu-list {
-			min-width: 100%;
+			max-width: 100%;
+			width: 100%;
 			right: 0;
+		}
+		&__modal-content {
+			max-width: 320px;
+			max-height: 419px;
+		}
+		&__modal-title {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 130%;
+			color: $text;
+			margin-bottom: 8px;
+		}
+		&__modal-subtitle {
+			font-size: 16px;
+			line-height: 140%;
+			margin-bottom: 31px;
+		}
+		input {
+			margin-bottom: 31px;
+			font-size: 14px;
+			line-height: 140%;
+		}
+		&__modal-personal {
+			display: none;
 		}
 	}
 }

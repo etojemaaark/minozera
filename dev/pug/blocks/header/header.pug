@@ -2,13 +2,10 @@ header.header
 	.container
 		.header__wrapper
 			.header__left
-				a.header__logo(href="#") 
+				a.header__logo(href="##") 
 					img(src="static/images/general/logo-header.svg", alt="Министерские озера")
 				nav
 					ul.header__menu-list
-						li
-							a.header__logo-mob(href="#") 
-								img(src="static/images/general/logo-header.svg", alt="Министерские озера")
 						li
 							a.header__menu-link(href="#citys") О комплексе
 						li
@@ -24,13 +21,26 @@ header.header
 								+icon('phone')
 								p 8 800-888-88-888
 						li
-							a.header__mob-callback._btn(href="#") ОБРАТНЫЙ ЗВОНОК
+							a#header-btn.header__mob-callback._btn(href="##") ОБРАТНЫЙ ЗВОНОК
 			.header__right
 				a.header__phone(href="tel:88008888888")
 					+icon('phone')
 					p 8 800-888-88-888
-				a.header__callback._btn(href="#") ОБРАТНЫЙ ЗВОНОК
+				a#header-btn-2.header__callback._btn(href="##") ОБРАТНЫЙ ЗВОНОК
 			.header__burger
 				span
 				span
 				span
+		form#header-modal.header__modal(action="#")
+			.header__modal-content
+				.header__modal-title Обратный звонок
+				.header__modal-close
+					+icon('cross')
+				p.header__modal-subtitle Заполните свои данные, чтобы мы могли связаться с вами
+				input(type="text" placeholder="Ваше имя")
+				input(type="tel" placeholder="Ваш номер телефона")
+				input(type="email" placeholder="Ваш e-mail")
+				a.header__modal-btn._btn(href="#") ОТПРАВИТЬ
+				.header__modal-personal Нажимая кнопку “Отправить”, вы принимаете 
+					span 
+						a(href="") условия обработки персональных данных

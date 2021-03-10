@@ -129,13 +129,15 @@ var swiperCitys = new Swiper(".citys__slider", {
   // 	draggable: true,
   // },
   slidesPerView: 'auto',
-  // spaceBetween: '28',
+  // spaceBetween: '30',
+  // loopedSlides: 8,
+  // centeredSlides: true,
   grabCursor: true,
   // autoplay: {
   // 	delay: 1000,
   // 	disableOnInteraction: false,
   // },
-  loop: true,
+  // loop: true,
   speed: 1000 // breakpoints: {
   // 	1707: {
   // 		slidesPerView: 3,
@@ -346,3 +348,38 @@ anchors.forEach(function (item) {
     }, animationTime / framesCount);
   });
 });
+var modal = document.getElementById('header-modal');
+var btn = document.getElementById("header-btn");
+var cross = document.getElementsByClassName("header__modal-close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "flex";
+};
+
+cross.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+var modal = document.getElementById('header-modal');
+var btn = document.getElementById("header-btn-2");
+var cross = document.getElementsByClassName("header__modal-close")[0];
+
+btn.onclick = function () {
+  modal.style.display = "flex";
+};
+
+cross.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

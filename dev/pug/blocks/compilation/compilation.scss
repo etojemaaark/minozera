@@ -52,9 +52,13 @@
 			text-align: center;
 			justify-content: center;
 		}
+		h3 {
+			max-width: 500px;
+			margin: 0 auto 12px auto;
+		}
 		&__subtitle {
-			max-width: 100%;
-			margin-bottom: 30px;
+			margin: 0 auto 30px auto;
+			max-width: 400px;
 		}
 		&__image {
 			display: none;
@@ -85,26 +89,6 @@
 		&__subtitle {
 			font-size: 14px;
 			max-width: 300px;
-		}
-	}
-}
-@media (max-width: 425px) {
-	.compilation {
-		&__wrapper {
-			justify-content: flex-start;
-		}
-		&__info {
-			text-align: center;
-		}
-		&__subtitle {
-			margin: 0 0 30px 0;
-			text-align: left;
-		}
-		h3 {
-			text-align: left;
-		}
-		&__btn {
-			margin: 0 auto;
 		}
 	}
 }

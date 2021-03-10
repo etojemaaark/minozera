@@ -24,6 +24,9 @@ aside {
 }
 html,
 body {
+	// overflow-x: hidden;
+	// height: 100%;
+	// width: 100%;
 	line-height: 1;
 	font-size: 14px;
 	-ms-text-size-adjust: 100%;
@@ -35,6 +38,9 @@ body {
 	height: 100%;
 	width: 100%;
 }
+// main {
+// 	overflow-x: hidden;
+// }
 input,
 button,
 textarea {

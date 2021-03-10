@@ -16,6 +16,21 @@
 	height: 12px;
 	margin-right: 5px;
 }
+.icon-callback {
+	width: 20px;
+	height: 20px;
+	fill: $accent;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+}
+.icon-cross {
+	width: 20px;
+	height: 20px;
+	fill: $accent;
+	stroke: $accent;
+}
 @media (max-width: 1240px) {
 	.icon-phone {
 		width: 24px;

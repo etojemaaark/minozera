@@ -16,10 +16,9 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
-          <div class="header__left"><a class="header__logo" href="#"> <img src="static/images/general/logo-header.svg" alt="Министерские озера"></a>
+          <div class="header__left"><a class="header__logo" href="##"> <img src="static/images/general/logo-header.svg" alt="Министерские озера"></a>
             <nav>
               <ul class="header__menu-list">
-                <li><a class="header__logo-mob" href="#"> <img src="static/images/general/logo-header.svg" alt="Министерские озера"></a></li>
                 <li><a class="header__menu-link" href="#citys">О комплексе</a></li>
                 <li><a class="header__menu-link" href="#genplan">Генплан</a></li>
                 <li><a class="header__menu-link" href="##">Квартиры</a></li>
@@ -30,7 +29,7 @@
                       <use xlink:href="static/images/svg/symbol/sprite.svg#phone"></use>
                     </svg>
                     <p>8 800-888-88-888</p></a></li>
-                <li><a class="header__mob-callback _btn" href="#">ОБРАТНЫЙ ЗВОНОК</a></li>
+                <li><a class="header__mob-callback _btn" id="header-btn" href="##">ОБРАТНЫЙ ЗВОНОК</a></li>
               </ul>
             </nav>
           </div>
@@ -38,18 +37,33 @@
               <svg class="svg-sprite-icon icon-phone">
                 <use xlink:href="static/images/svg/symbol/sprite.svg#phone"></use>
               </svg>
-              <p>8 800-888-88-888</p></a><a class="header__callback _btn" href="#">ОБРАТНЫЙ ЗВОНОК</a></div>
+              <p>8 800-888-88-888</p></a><a class="header__callback _btn" id="header-btn-2" href="##">ОБРАТНЫЙ ЗВОНОК</a></div>
           <div class="header__burger"><span></span><span></span><span></span></div>
         </div>
+        <form class="header__modal" id="header-modal" action="#">
+          <div class="header__modal-content">
+            <div class="header__modal-title">Обратный звонок</div>
+            <div class="header__modal-close">
+              <svg class="svg-sprite-icon icon-cross">
+                <use xlink:href="static/images/svg/symbol/sprite.svg#cross"></use>
+              </svg>
+            </div>
+            <p class="header__modal-subtitle">Заполните свои данные, чтобы мы могли связаться с вами</p>
+            <input type="text" placeholder="Ваше имя">
+            <input type="tel" placeholder="Ваш номер телефона">
+            <input type="email" placeholder="Ваш e-mail"><a class="header__modal-btn _btn" href="#">ОТПРАВИТЬ</a>
+            <div class="header__modal-personal">Нажимая кнопку “Отправить”, вы принимаете <span> <a href="">условия обработки персональных данных</a></span></div>
+          </div>
+        </form>
       </div>
     </header>
     <main>
       <section class="main">
         <div class="main__image"><img src="static/images/general/main-bg.png" alt=""></div>
         <div class="main__wrapper container">
-          <h1 class="_anim-items _anim-no-hide">Министерские озера</h1>
-          <p class="_anim-items _anim-no-hide">Жилой комплекс в Сочи с видом на горы и море</p>
-          <div class="main__pulse pulse-1 _anim-items _anim-no-hide">
+          <h1>Министерские озера</h1>
+          <p>Жилой комплекс в Сочи с видом на горы и море</p>
+          <div class="main__pulse pulse-1">
             <div class="main__pulse-wrapper">
               <div class="main__pulse-circle">
                 <svg class="main__pulse-circle" expanded="true" height="100px" width="100px">
@@ -61,7 +75,7 @@
               <div class="main__pulse-text">Окруженный с двух сторон горами, жилой комплекс в любую погоду защищен от ветра</div>
             </div>
           </div>
-          <div class="main__pulse pulse-2 _anim-items _anim-no-hide">
+          <div class="main__pulse pulse-2">
             <div class="main__pulse-wrapper">
               <div class="main__pulse-circle">
                 <svg class="main__pulse-circle" expanded="true" height="100px" width="100px">
@@ -73,7 +87,7 @@
               <div class="main__pulse-text">Близость национального парка Сочи с его южной зеленью создает особый микроклимат</div>
             </div>
           </div>
-          <div class="main__pulse pulse-3 _anim-items _anim-no-hide">
+          <div class="main__pulse pulse-3">
             <div class="main__pulse-circle">
               <div class="main__pulse-wrapper">
                 <svg class="main__pulse-circle" expanded="true" height="100px" width="100px">
@@ -271,7 +285,7 @@
           </div>
         </div>
       </section>
-      <section class="genplan">
+      <section class="genplan" id="genplan">
         <div class="container">
           <h2 class="_h2">Генплан</h2>
           <div class="genplan__subtitle">Министерские Озера состоят из 4 кварталов: Фруктовый, Город детства, Комфорт и Бизнес </div>
